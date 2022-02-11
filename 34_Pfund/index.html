@@ -1,0 +1,35 @@
+<script>
+    "use strict";
+
+    // Programmiere hier die Funktion calc(number)
+    function calc(Euro){
+    
+    var Pfund;
+    Pfund = Euro * 0.85;
+    
+    var ausgabe;
+      if (Euro==1) {
+        ausgabe = Euro + " Euro entspricht " + Pfund + " Pfund"
+        } else { 
+            ausgabe = Euro + " Euro entsprechen " + Pfund + " Pfund"
+        }
+     
+    return ausgabe;  }
+   
+
+    function clicked() {
+        var input = document.getElementById("idInput").value;
+        var output = calc(input);
+        document.getElementById("idOutput").innerHTML = output;
+    }
+
+</script>
+</head>
+
+<body>
+<h1>Euro in Pfund</h1>
+<input id="idInput" type="text" value="100"> Euro<br /><br />
+<button onClick="clicked();">Berechne etwas!</button><br /><br />
+<div id="idOutput">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+</body>
+</html>
